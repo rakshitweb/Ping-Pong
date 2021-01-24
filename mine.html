@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong</title>
+</head>
+<style>
+    #container {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 80px auto;
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .gameName {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1em;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .scoreKeeper {
+        padding: 20px 10px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 10px;
+    }
+
+    p {
+        margin: 0px;
+        font-size: 1em;
+    }
+
+    #score {
+        font-size: 4em;
+        font-weight: 600;
+    }
+
+    .play {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .playto {
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .max {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #maxScore {
+        width: 80px;
+        margin-left: 10px;
+        border-radius: 20px;
+        padding: 7px;
+        font-size: 1.5em;
+    }
+
+    #controller {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #controller button {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1.3em;
+        font-weight: 400;
+        letter-spacing: 1px;
+        flex-grow: 1;
+        color: white;
+        border-color: transparent;
+    }
+
+    #controller button:nth-last-child(1) {
+        background-color: #f14668;
+    }
+
+    #controller button:nth-last-child(1):hover {
+        box-shadow: 0px 5px 5px rgba(241, 70, 104, 0.5);
+    }
+
+    #controller button:nth-last-child(2) {
+        background-color: rgb(50, 152, 220);
+    }
+
+    #controller button:nth-last-child(2):hover {
+        box-shadow: 0px 5px 5px rgba(50, 152, 220, 0.5);
+    }
+
+    #controller button:nth-last-child(3) {
+        background-color: rgb(0, 209, 178);
+    }
+
+    #controller button:nth-last-child(3):hover {
+        box-shadow: 0px 5px 5px rgba(0, 209, 178, 0.5);
+    }
+
+    .disable {
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+            alt="">
+        <span class="gameName">Ping Pong Score Keeper</span>
+        <div class="scoreKeeper">
+            <p id="score"><span id="scoreP1">0</span> To <span id="scoreP2">0</span></p>
+            <p>Use the button below to keep score</p>
+            <div class="play">
+                <label class="playto" for="maxScore">Playing To </label>
+                <div class="max">
+                    <select name="" id="maxScore">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                </div>
+                </select>
+            </div>
+        </div>
+        <div id="controller">
+            <button id="player1">+1 Player One</button>
+            <button id="player2">+1 Player Two</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="skmine.js"></script>
+</body>
+
+</html>
